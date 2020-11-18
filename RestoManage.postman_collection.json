@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "10d87edc-3188-4840-89ac-bf15db033b37",
+		"name": "RestoManage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterRestaurant_1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Blue Nile\",\r\n    \"Address\": \"102, Bund Garden Rd, Agarkar Nagar, Pune, Maharashtra 411001\",\r\n    \"Lat\": 18.521829,\r\n    \"Long\": 73.877526,\r\n    \"ContactNos\": [\r\n        {\r\n            \"Title\": \"Primary\",\r\n            \"Phone\": \"1234567890\"\r\n        },\r\n        {\r\n            \"Title\": \"Secondary\",\r\n            \"Phone\": \"9087654321\"\r\n        }\r\n    ],\r\n    \"OperationTimings\": [\r\n        {\r\n            \"Day\":\"Monday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Tuesday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Wednesday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Thursday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Friday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Saturday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Sunday\",\r\n            \"StartTime\": 10.00,\r\n            \"EndTime\": 22.00\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/RegisterRestaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"RegisterRestaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterRestaurant_2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Ritz\",\r\n    \"Address\": \"6, Sadhu Vaswani Chowk, Opp GPO, Agarkar Nagar, Pune, Maharashtra 411001\",\r\n    \"Lat\": 18.523509,\r\n    \"Long\": 73.876734,\r\n    \"ContactNos\": [\r\n        {\r\n            \"Title\": \"Primary\",\r\n            \"Phone\": \"1574567890\"\r\n        },\r\n        {\r\n            \"Title\": \"Secondary\",\r\n            \"Phone\": \"9087304321\"\r\n        }\r\n    ],\r\n    \"OperationTimings\": [\r\n        {\r\n            \"Day\":\"Monday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Tuesday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Wednesday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Thursday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Friday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Saturday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        },\r\n        {\r\n            \"Day\":\"Sunday\",\r\n            \"StartTime\": 12.00,\r\n            \"EndTime\": 22.00\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/RegisterRestaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"RegisterRestaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublishMenu_1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantId\": 0,\r\n    \"menu\": {\r\n        \"foods\": [\r\n            {\r\n                \"foodName\": \"Chana masala\",\r\n                \"price\": 1329\r\n            },\r\n            {\r\n                \"foodName\": \"Chapati\",\r\n                \"price\": 1320\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken razala\",\r\n                \"price\": 294\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken Tikka masala\",\r\n                \"price\": 398\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken Tikka\",\r\n                \"price\": 583\r\n            },\r\n            {\r\n                \"foodName\": \"Chole bhature\",\r\n                \"price\": 350\r\n            },\r\n            {\r\n                \"foodName\": \"Daal baati churma\",\r\n                \"price\": 627\r\n            },\r\n            {\r\n                \"foodName\": \"Daal puri\",\r\n                \"price\": 1006\r\n            },\r\n            {\r\n                \"foodName\": \"Dal makhani \",\r\n                \"price\": 928\r\n            },\r\n            {\r\n                \"foodName\": \"Dal tadka\",\r\n                \"price\": 1075\r\n            },\r\n            {\r\n                \"foodName\": \"Dum aloo\",\r\n                \"price\": 812\r\n            },\r\n            {\r\n                \"foodName\": \"Poha\",\r\n                \"price\": 187\r\n            },\r\n            {\r\n                \"foodName\": \"Fara\",\r\n                \"price\": 373\r\n            },\r\n            {\r\n                \"foodName\": \"Kachori\",\r\n                \"price\": 367\r\n            },\r\n            {\r\n                \"foodName\": \"Kadai paneer\",\r\n                \"price\": 438\r\n            },\r\n            {\r\n                \"foodName\": \"Kadhi pakoda\",\r\n                \"price\": 539\r\n            },\r\n            {\r\n                \"foodName\": \"Karela bharta\",\r\n                \"price\": 1407\r\n            },\r\n            {\r\n                \"foodName\": \"Khichdi\",\r\n                \"price\": 218\r\n            },\r\n            {\r\n                \"foodName\": \"Kofta\",\r\n                \"price\": 847\r\n            },\r\n            {\r\n                \"foodName\": \"Kulfi falooda\",\r\n                \"price\": 352\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/PublishMenu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"PublishMenu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublishMenu_2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantId\": 1,\r\n    \"menu\": {\r\n        \"foods\": [\r\n            {\r\n                \"foodName\": \"Gulab jamun\",\r\n                \"price\": 1298\r\n            },\r\n            {\r\n                \"foodName\": \"Imarti\",\r\n                \"price\": 886\r\n            },\r\n            {\r\n                \"foodName\": \"Jalebi\",\r\n                \"price\": 1235\r\n            },\r\n            {\r\n                \"foodName\": \"Kaju katli\",\r\n                \"price\": 1407\r\n            },\r\n            {\r\n                \"foodName\": \"Kalakand\",\r\n                \"price\": 1087\r\n            },\r\n            {\r\n                \"foodName\": \"Kheer\",\r\n                \"price\": 1052\r\n            },\r\n            {\r\n                \"foodName\": \"Laddu\",\r\n                \"price\": 1169\r\n            },\r\n            {\r\n                \"foodName\": \"Lassi\",\r\n                \"price\": 267\r\n            },\r\n            {\r\n                \"foodName\": \"Nankhatai\",\r\n                \"price\": 1206\r\n            },\r\n            {\r\n                \"foodName\": \"Petha\",\r\n                \"price\": 437\r\n            },\r\n            {\r\n                \"foodName\": \"Phirni\",\r\n                \"price\": 321\r\n            },\r\n            {\r\n                \"foodName\": \"Rabri\",\r\n                \"price\": 775\r\n            },\r\n            {\r\n                \"foodName\": \"Sheera\",\r\n                \"price\": 423\r\n            },\r\n            {\r\n                \"foodName\": \"Singori\",\r\n                \"price\": 1437\r\n            },\r\n            {\r\n                \"foodName\": \"Sohan halwa\",\r\n                \"price\": 432\r\n            },\r\n            {\r\n                \"foodName\": \"Sohan papdi\",\r\n                \"price\": 86\r\n            },\r\n            {\r\n                \"foodName\": \"Chhena jalebi\",\r\n                \"price\": 762\r\n            },\r\n            {\r\n                \"foodName\": \"Chhena kheeri\",\r\n                \"price\": 529\r\n            },\r\n            {\r\n                \"foodName\": \"Chhena poda\",\r\n                \"price\": 603\r\n            },\r\n            {\r\n                \"foodName\": \"Cham cham\",\r\n                \"price\": 1421\r\n            },\r\n            {\r\n                \"foodName\": \"Kheer sagar\",\r\n                \"price\": 508\r\n            },\r\n            {\r\n                \"foodName\": \"Ledikeni\",\r\n                \"price\": 1351\r\n            },\r\n            {\r\n                \"foodName\": \"Lyangcha\",\r\n                \"price\": 590\r\n            },\r\n            {\r\n                \"foodName\": \"Malapua\",\r\n                \"price\": 665\r\n            },\r\n            {\r\n                \"foodName\": \"Mihidana\",\r\n                \"price\": 1294\r\n            },\r\n            {\r\n                \"foodName\": \"Misti doi\",\r\n                \"price\": 1377\r\n            },\r\n            {\r\n                \"foodName\": \"Pantua\",\r\n                \"price\": 386\r\n            },\r\n            {\r\n                \"foodName\": \"Pithe\",\r\n                \"price\": 1455\r\n            },\r\n            {\r\n                \"foodName\": \"Rasabali\",\r\n                \"price\": 558\r\n            },\r\n            {\r\n                \"foodName\": \"Ras malai\",\r\n                \"price\": 763\r\n            },\r\n            {\r\n                \"foodName\": \"Rasgulla\",\r\n                \"price\": 232\r\n            },\r\n            {\r\n                \"foodName\": \"Sandesh\",\r\n                \"price\": 1008\r\n            },\r\n            {\r\n                \"foodName\": \"Adhirasam\",\r\n                \"price\": 664\r\n            },\r\n            {\r\n                \"foodName\": \"Ariselu\",\r\n                \"price\": 625\r\n            },\r\n            {\r\n                \"foodName\": \"Bandar laddu\",\r\n                \"price\": 312\r\n            },\r\n            {\r\n                \"foodName\": \"Chikki\",\r\n                \"price\": 344\r\n            },\r\n            {\r\n                \"foodName\": \"Dharwad pedha\",\r\n                \"price\": 750\r\n            },\r\n            {\r\n                \"foodName\": \"Double ka meetha\",\r\n                \"price\": 1141\r\n            },\r\n            {\r\n                \"foodName\": \"Gavvalu\",\r\n                \"price\": 973\r\n            },\r\n            {\r\n                \"foodName\": \"Kakinada khaja\",\r\n                \"price\": 1125\r\n            },\r\n            {\r\n                \"foodName\": \"Kuzhi paniyaram\",\r\n                \"price\": 129\r\n            },\r\n            {\r\n                \"foodName\": \"Mysore pak\",\r\n                \"price\": 749\r\n            },\r\n            {\r\n                \"foodName\": \"Obbattu holige\",\r\n                \"price\": 1410\r\n            },\r\n            {\r\n                \"foodName\": \"Palathalikalu\",\r\n                \"price\": 186\r\n            },\r\n            {\r\n                \"foodName\": \"Poornalu\",\r\n                \"price\": 1274\r\n            },\r\n            {\r\n                \"foodName\": \"Pongal\",\r\n                \"price\": 922\r\n            },\r\n            {\r\n                \"foodName\": \"Pootharekulu\",\r\n                \"price\": 180\r\n            },\r\n            {\r\n                \"foodName\": \"Qubani ka meetha\",\r\n                \"price\": 927\r\n            },\r\n            {\r\n                \"foodName\": \"Sheer korma\",\r\n                \"price\": 355\r\n            },\r\n            {\r\n                \"foodName\": \"Unni Appam\",\r\n                \"price\": 648\r\n            },\r\n            {\r\n                \"foodName\": \"Kajjikaya\",\r\n                \"price\": 526\r\n            },\r\n            {\r\n                \"foodName\": \"Anarsa\",\r\n                \"price\": 1321\r\n            },\r\n            {\r\n                \"foodName\": \"Basundi\",\r\n                \"price\": 1004\r\n            },\r\n            {\r\n                \"foodName\": \"Dhondas\",\r\n                \"price\": 307\r\n            },\r\n            {\r\n                \"foodName\": \"Doodhpak\",\r\n                \"price\": 1375\r\n            },\r\n            {\r\n                \"foodName\": \"Mahim halwa\",\r\n                \"price\": 401\r\n            },\r\n            {\r\n                \"foodName\": \"Modak\",\r\n                \"price\": 619\r\n            },\r\n            {\r\n                \"foodName\": \"Shankarpali\",\r\n                \"price\": 335\r\n            },\r\n            {\r\n                \"foodName\": \"Shrikhand\",\r\n                \"price\": 1490\r\n            },\r\n            {\r\n                \"foodName\": \"Sutar feni\",\r\n                \"price\": 1072\r\n            },\r\n            {\r\n                \"foodName\": \"Maach Jhol\",\r\n                \"price\": 199\r\n            },\r\n            {\r\n                \"foodName\": \"Pork Bharta\",\r\n                \"price\": 791\r\n            },\r\n            {\r\n                \"foodName\": \"Chak Hao Kheer\",\r\n                \"price\": 488\r\n            },\r\n            {\r\n                \"foodName\": \"Galho\",\r\n                \"price\": 1214\r\n            },\r\n            {\r\n                \"foodName\": \"Aloo gobi\",\r\n                \"price\": 814\r\n            },\r\n            {\r\n                \"foodName\": \"Aloo tikki\",\r\n                \"price\": 733\r\n            },\r\n            {\r\n                \"foodName\": \"Aloo matar\",\r\n                \"price\": 611\r\n            },\r\n            {\r\n                \"foodName\": \"Aloo methi\",\r\n                \"price\": 618\r\n            },\r\n            {\r\n                \"foodName\": \"Aloo shimla mirch\",\r\n                \"price\": 869\r\n            },\r\n            {\r\n                \"foodName\": \"Bhatura\",\r\n                \"price\": 776\r\n            },\r\n            {\r\n                \"foodName\": \"Bhindi masala\",\r\n                \"price\": 413\r\n            },\r\n            {\r\n                \"foodName\": \"Biryani\",\r\n                \"price\": 120\r\n            },\r\n            {\r\n                \"foodName\": \"Butter chicken\",\r\n                \"price\": 1215\r\n            },\r\n            {\r\n                \"foodName\": \"Chana masala\",\r\n                \"price\": 209\r\n            },\r\n            {\r\n                \"foodName\": \"Chapati\",\r\n                \"price\": 141\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken razala\",\r\n                \"price\": 581\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken Tikka masala\",\r\n                \"price\": 879\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken Tikka\",\r\n                \"price\": 214\r\n            },\r\n            {\r\n                \"foodName\": \"Chole bhature\",\r\n                \"price\": 1404\r\n            },\r\n            {\r\n                \"foodName\": \"Daal baati churma\",\r\n                \"price\": 713\r\n            },\r\n            {\r\n                \"foodName\": \"Daal puri\",\r\n                \"price\": 252\r\n            },\r\n            {\r\n                \"foodName\": \"Dal makhani \",\r\n                \"price\": 592\r\n            },\r\n            {\r\n                \"foodName\": \"Dal tadka\",\r\n                \"price\": 587\r\n            },\r\n            {\r\n                \"foodName\": \"Dum aloo\",\r\n                \"price\": 271\r\n            },\r\n            {\r\n                \"foodName\": \"Poha\",\r\n                \"price\": 841\r\n            },\r\n            {\r\n                \"foodName\": \"Fara\",\r\n                \"price\": 315\r\n            },\r\n            {\r\n                \"foodName\": \"Kachori\",\r\n                \"price\": 606\r\n            },\r\n            {\r\n                \"foodName\": \"Kadai paneer\",\r\n                \"price\": 414\r\n            },\r\n            {\r\n                \"foodName\": \"Kadhi pakoda\",\r\n                \"price\": 989\r\n            },\r\n            {\r\n                \"foodName\": \"Karela bharta\",\r\n                \"price\": 404\r\n            },\r\n            {\r\n                \"foodName\": \"Khichdi\",\r\n                \"price\": 1076\r\n            },\r\n            {\r\n                \"foodName\": \"Kofta\",\r\n                \"price\": 1128\r\n            },\r\n            {\r\n                \"foodName\": \"Kulfi falooda\",\r\n                \"price\": 308\r\n            },\r\n            {\r\n                \"foodName\": \"Lauki ke kofte\",\r\n                \"price\": 372\r\n            },\r\n            {\r\n                \"foodName\": \"Lauki ki subji\",\r\n                \"price\": 198\r\n            },\r\n            {\r\n                \"foodName\": \"Litti chokha\",\r\n                \"price\": 390\r\n            },\r\n            {\r\n                \"foodName\": \"Makki di roti sarson da saag\",\r\n                \"price\": 1237\r\n            },\r\n            {\r\n                \"foodName\": \"Misi roti\",\r\n                \"price\": 1456\r\n            },\r\n            {\r\n                \"foodName\": \"Mushroom do pyaza\",\r\n                \"price\": 1079\r\n            },\r\n            {\r\n                \"foodName\": \"Mushroom matar\",\r\n                \"price\": 299\r\n            },\r\n            {\r\n                \"foodName\": \"Naan\",\r\n                \"price\": 568\r\n            },\r\n            {\r\n                \"foodName\": \"Navrattan korma\",\r\n                \"price\": 559\r\n            },\r\n            {\r\n                \"foodName\": \"Palak paneer\",\r\n                \"price\": 1038\r\n            },\r\n            {\r\n                \"foodName\": \"Paneer butter masala\",\r\n                \"price\": 601\r\n            },\r\n            {\r\n                \"foodName\": \"Paneer tikka masala\",\r\n                \"price\": 1021\r\n            },\r\n            {\r\n                \"foodName\": \"Pani puri\",\r\n                \"price\": 566\r\n            },\r\n            {\r\n                \"foodName\": \"Panjeeri\",\r\n                \"price\": 544\r\n            },\r\n            {\r\n                \"foodName\": \"Papad\",\r\n                \"price\": 1412\r\n            },\r\n            {\r\n                \"foodName\": \"Paratha\",\r\n                \"price\": 1311\r\n            },\r\n            {\r\n                \"foodName\": \"Pattor\",\r\n                \"price\": 348\r\n            },\r\n            {\r\n                \"foodName\": \"Pindi chana\",\r\n                \"price\": 856\r\n            },\r\n            {\r\n                \"foodName\": \"Rajma chaval\",\r\n                \"price\": 321\r\n            },\r\n            {\r\n                \"foodName\": \"Rongi\",\r\n                \"price\": 1191\r\n            },\r\n            {\r\n                \"foodName\": \"Samosa\",\r\n                \"price\": 760\r\n            },\r\n            {\r\n                \"foodName\": \"Sattu ki roti\",\r\n                \"price\": 889\r\n            },\r\n            {\r\n                \"foodName\": \"Shahi paneer\",\r\n                \"price\": 940\r\n            },\r\n            {\r\n                \"foodName\": \"Shahi tukra\",\r\n                \"price\": 1420\r\n            },\r\n            {\r\n                \"foodName\": \"Vegetable jalfrezi\",\r\n                \"price\": 438\r\n            },\r\n            {\r\n                \"foodName\": \"Tandoori Chicken\",\r\n                \"price\": 127\r\n            },\r\n            {\r\n                \"foodName\": \"Tandoori Fish Tikka\",\r\n                \"price\": 225\r\n            },\r\n            {\r\n                \"foodName\": \"Attu\",\r\n                \"price\": 587\r\n            },\r\n            {\r\n                \"foodName\": \"Avial\",\r\n                \"price\": 229\r\n            },\r\n            {\r\n                \"foodName\": \"Bisi bele bath\",\r\n                \"price\": 597\r\n            },\r\n            {\r\n                \"foodName\": \"Currivepillai sadam \",\r\n                \"price\": 435\r\n            },\r\n            {\r\n                \"foodName\": \"Dosa\",\r\n                \"price\": 753\r\n            },\r\n            {\r\n                \"foodName\": \"Idiappam\",\r\n                \"price\": 1122\r\n            },\r\n            {\r\n                \"foodName\": \"Idli\",\r\n                \"price\": 1072\r\n            },\r\n            {\r\n                \"foodName\": \"Kanji\",\r\n                \"price\": 1388\r\n            },\r\n            {\r\n                \"foodName\": \"Kaara kozhambu\",\r\n                \"price\": 291\r\n            },\r\n            {\r\n                \"foodName\": \"Keerai kootu\",\r\n                \"price\": 1490\r\n            },\r\n            {\r\n                \"foodName\": \"Keerai masiyal\",\r\n                \"price\": 1241\r\n            },\r\n            {\r\n                \"foodName\": \"Keerai sadam\",\r\n                \"price\": 790\r\n            },\r\n            {\r\n                \"foodName\": \"Keerai poriyal\",\r\n                \"price\": 1495\r\n            },\r\n            {\r\n                \"foodName\": \"Beef Fry\",\r\n                \"price\": 581\r\n            },\r\n            {\r\n                \"foodName\": \"Kootu\",\r\n                \"price\": 1119\r\n            },\r\n            {\r\n                \"foodName\": \"Kos kootu\",\r\n                \"price\": 1124\r\n            },\r\n            {\r\n                \"foodName\": \"Koshambri\",\r\n                \"price\": 825\r\n            },\r\n            {\r\n                \"foodName\": \"Kothamali sadam\",\r\n                \"price\": 1453\r\n            },\r\n            {\r\n                \"foodName\": \"Kuzhakkattai\",\r\n                \"price\": 382\r\n            },\r\n            {\r\n                \"foodName\": \"Kuzhambu\",\r\n                \"price\": 1034\r\n            },\r\n            {\r\n                \"foodName\": \"Masala Dosa\",\r\n                \"price\": 146\r\n            },\r\n            {\r\n                \"foodName\": \"Pachadi\",\r\n                \"price\": 834\r\n            },\r\n            {\r\n                \"foodName\": \"Paniyaram\",\r\n                \"price\": 300\r\n            },\r\n            {\r\n                \"foodName\": \"Papadum\",\r\n                \"price\": 908\r\n            },\r\n            {\r\n                \"foodName\": \"Paravannam\",\r\n                \"price\": 164\r\n            },\r\n            {\r\n                \"foodName\": \"Payasam\",\r\n                \"price\": 1163\r\n            },\r\n            {\r\n                \"foodName\": \"Paruppu sadam\",\r\n                \"price\": 1433\r\n            },\r\n            {\r\n                \"foodName\": \"Pesarattu\",\r\n                \"price\": 445\r\n            },\r\n            {\r\n                \"foodName\": \"Poriyal\",\r\n                \"price\": 1499\r\n            },\r\n            {\r\n                \"foodName\": \"Puli sadam\",\r\n                \"price\": 835\r\n            },\r\n            {\r\n                \"foodName\": \"Rasam\",\r\n                \"price\": 1040\r\n            },\r\n            {\r\n                \"foodName\": \"Puttu\",\r\n                \"price\": 1383\r\n            },\r\n            {\r\n                \"foodName\": \"Sambar\",\r\n                \"price\": 289\r\n            },\r\n            {\r\n                \"foodName\": \"Sandige\",\r\n                \"price\": 1419\r\n            },\r\n            {\r\n                \"foodName\": \"Sevai\",\r\n                \"price\": 255\r\n            },\r\n            {\r\n                \"foodName\": \"Thayir sadam\",\r\n                \"price\": 867\r\n            },\r\n            {\r\n                \"foodName\": \"Theeyal\",\r\n                \"price\": 1118\r\n            },\r\n            {\r\n                \"foodName\": \"Uttapam\",\r\n                \"price\": 450\r\n            },\r\n            {\r\n                \"foodName\": \"Vada\",\r\n                \"price\": 239\r\n            },\r\n            {\r\n                \"foodName\": \"Chicken Varuval\",\r\n                \"price\": 258\r\n            },\r\n            {\r\n                \"foodName\": \"Upma\",\r\n                \"price\": 679\r\n            },\r\n            {\r\n                \"foodName\": \"Amti\",\r\n                \"price\": 1046\r\n            },\r\n            {\r\n                \"foodName\": \"Zunka\",\r\n                \"price\": 518\r\n            },\r\n            {\r\n                \"foodName\": \"Kolim Jawla\",\r\n                \"price\": 1478\r\n            },\r\n            {\r\n                \"foodName\": \"Saath\",\r\n                \"price\": 1175\r\n            },\r\n            {\r\n                \"foodName\": \"Bajri no rotlo\",\r\n                \"price\": 1344\r\n            },\r\n            {\r\n                \"foodName\": \"Coconut vadi\",\r\n                \"price\": 811\r\n            },\r\n            {\r\n                \"foodName\": \"Bhakri\",\r\n                \"price\": 491\r\n            },\r\n            {\r\n                \"foodName\": \"Bombil fry\",\r\n                \"price\": 1374\r\n            },\r\n            {\r\n                \"foodName\": \"Chakali\",\r\n                \"price\": 819\r\n            },\r\n            {\r\n                \"foodName\": \"Chevdo\",\r\n                \"price\": 396\r\n            },\r\n            {\r\n                \"foodName\": \"Chorafali\",\r\n                \"price\": 1108\r\n            },\r\n            {\r\n                \"foodName\": \"Copra paak\",\r\n                \"price\": 374\r\n            },\r\n            {\r\n                \"foodName\": \"Daal Dhokli\",\r\n                \"price\": 862\r\n            },\r\n            {\r\n                \"foodName\": \"Kutchi dabeli\",\r\n                \"price\": 313\r\n            },\r\n            {\r\n                \"foodName\": \"Dahi vada\",\r\n                \"price\": 100\r\n            },\r\n            {\r\n                \"foodName\": \"Dalithoy\",\r\n                \"price\": 504\r\n            },\r\n            {\r\n                \"foodName\": \"Dhokla\",\r\n                \"price\": 1168\r\n            },\r\n            {\r\n                \"foodName\": \"Dudhi halwa\",\r\n                \"price\": 667\r\n            },\r\n            {\r\n                \"foodName\": \"Gatta curry\",\r\n                \"price\": 497\r\n            },\r\n            {\r\n                \"foodName\": \"Gud papdi\",\r\n                \"price\": 758\r\n            },\r\n            {\r\n                \"foodName\": \"Ghooghra\",\r\n                \"price\": 982\r\n            },\r\n            {\r\n                \"foodName\": \"Handwo\",\r\n                \"price\": 877\r\n            },\r\n            {\r\n                \"foodName\": \"Halvasan\",\r\n                \"price\": 409\r\n            },\r\n            {\r\n                \"foodName\": \"Jeera Aloo\",\r\n                \"price\": 850\r\n            },\r\n            {\r\n                \"foodName\": \"Kansar\",\r\n                \"price\": 1220\r\n            },\r\n            {\r\n                \"foodName\": \"Keri no ras\",\r\n                \"price\": 614\r\n            },\r\n            {\r\n                \"foodName\": \"Khakhra\",\r\n                \"price\": 110\r\n            },\r\n            {\r\n                \"foodName\": \"Khandvi\",\r\n                \"price\": 1172\r\n            },\r\n            {\r\n                \"foodName\": \"Kombdi vade\",\r\n                \"price\": 1459\r\n            },\r\n            {\r\n                \"foodName\": \"Laapsi\",\r\n                \"price\": 263\r\n            },\r\n            {\r\n                \"foodName\": \"Koshimbir\",\r\n                \"price\": 153\r\n            },\r\n            {\r\n                \"foodName\": \"Methi na Gota\",\r\n                \"price\": 1418\r\n            },\r\n            {\r\n                \"foodName\": \"Mohanthal\",\r\n                \"price\": 742\r\n            },\r\n            {\r\n                \"foodName\": \"Muthiya\",\r\n                \"price\": 269\r\n            },\r\n            {\r\n                \"foodName\": \"Patra\",\r\n                \"price\": 163\r\n            },\r\n            {\r\n                \"foodName\": \"Pav Bhaji\",\r\n                \"price\": 462\r\n            },\r\n            {\r\n                \"foodName\": \"Puri Bhaji\",\r\n                \"price\": 358\r\n            },\r\n            {\r\n                \"foodName\": \"Sabudana Khichadi\",\r\n                \"price\": 1209\r\n            },\r\n            {\r\n                \"foodName\": \"Sev khamani\",\r\n                \"price\": 249\r\n            },\r\n            {\r\n                \"foodName\": \"Sev tameta\",\r\n                \"price\": 1319\r\n            },\r\n            {\r\n                \"foodName\": \"Namakpara\",\r\n                \"price\": 579\r\n            },\r\n            {\r\n                \"foodName\": \"Sukhdi\",\r\n                \"price\": 1469\r\n            },\r\n            {\r\n                \"foodName\": \"Surnoli\",\r\n                \"price\": 672\r\n            },\r\n            {\r\n                \"foodName\": \"Thalipeeth\",\r\n                \"price\": 649\r\n            },\r\n            {\r\n                \"foodName\": \"Undhiyu\",\r\n                \"price\": 172\r\n            },\r\n            {\r\n                \"foodName\": \"Veg Kolhapuri\",\r\n                \"price\": 90\r\n            },\r\n            {\r\n                \"foodName\": \"Vindaloo\",\r\n                \"price\": 1115\r\n            },\r\n            {\r\n                \"foodName\": \"Lilva Kachori\",\r\n                \"price\": 423\r\n            },\r\n            {\r\n                \"foodName\": \"Mag Dhokli\",\r\n                \"price\": 840\r\n            },\r\n            {\r\n                \"foodName\": \"Khichu\",\r\n                \"price\": 283\r\n            },\r\n            {\r\n                \"foodName\": \"Thepla\",\r\n                \"price\": 1175\r\n            },\r\n            {\r\n                \"foodName\": \"Farsi Puri\",\r\n                \"price\": 276\r\n            },\r\n            {\r\n                \"foodName\": \"Khaman\",\r\n                \"price\": 1389\r\n            },\r\n            {\r\n                \"foodName\": \"Turiya Patra Vatana sabji\",\r\n                \"price\": 1500\r\n            },\r\n            {\r\n                \"foodName\": \"Churma Ladoo\",\r\n                \"price\": 1150\r\n            },\r\n            {\r\n                \"foodName\": \"Cheera Doi\",\r\n                \"price\": 764\r\n            },\r\n            {\r\n                \"foodName\": \"Gheela Pitha\",\r\n                \"price\": 1289\r\n            },\r\n            {\r\n                \"foodName\": \"Khar\",\r\n                \"price\": 716\r\n            },\r\n            {\r\n                \"foodName\": \"Kumol Sawul\",\r\n                \"price\": 206\r\n            },\r\n            {\r\n                \"foodName\": \"Luchi\",\r\n                \"price\": 736\r\n            },\r\n            {\r\n                \"foodName\": \"Alu Pitika\",\r\n                \"price\": 284\r\n            },\r\n            {\r\n                \"foodName\": \"Masor tenga\",\r\n                \"price\": 1474\r\n            },\r\n            {\r\n                \"foodName\": \"Bengena Pitika\",\r\n                \"price\": 711\r\n            },\r\n            {\r\n                \"foodName\": \"Bilahi Maas\",\r\n                \"price\": 343\r\n            },\r\n            {\r\n                \"foodName\": \"Black rice\",\r\n                \"price\": 1436\r\n            },\r\n            {\r\n                \"foodName\": \"Bora Sawul\",\r\n                \"price\": 1206\r\n            },\r\n            {\r\n                \"foodName\": \"Brown Rice\",\r\n                \"price\": 1423\r\n            },\r\n            {\r\n                \"foodName\": \"Chingri malai curry\",\r\n                \"price\": 1238\r\n            },\r\n            {\r\n                \"foodName\": \"Goja\",\r\n                \"price\": 585\r\n            },\r\n            {\r\n                \"foodName\": \"Hando Guri\",\r\n                \"price\": 1061\r\n            },\r\n            {\r\n                \"foodName\": \"Haq Maas\",\r\n                \"price\": 157\r\n            },\r\n            {\r\n                \"foodName\": \"Chingri Bhape\",\r\n                \"price\": 1361\r\n            },\r\n            {\r\n                \"foodName\": \"Kabiraji\",\r\n                \"price\": 758\r\n            },\r\n            {\r\n                \"foodName\": \"Khorisa\",\r\n                \"price\": 227\r\n            },\r\n            {\r\n                \"foodName\": \"Koldil Chicken\",\r\n                \"price\": 1026\r\n            },\r\n            {\r\n                \"foodName\": \"Konir Dom\",\r\n                \"price\": 327\r\n            },\r\n            {\r\n                \"foodName\": \"Koldil Duck\",\r\n                \"price\": 239\r\n            },\r\n            {\r\n                \"foodName\": \"Masor Koni\",\r\n                \"price\": 156\r\n            },\r\n            {\r\n                \"foodName\": \"Mishti Chholar Dal\",\r\n                \"price\": 80\r\n            },\r\n            {\r\n                \"foodName\": \"Pakhala\",\r\n                \"price\": 1012\r\n            },\r\n            {\r\n                \"foodName\": \"Pani Pitha\",\r\n                \"price\": 317\r\n            },\r\n            {\r\n                \"foodName\": \"Payokh\",\r\n                \"price\": 1230\r\n            },\r\n            {\r\n                \"foodName\": \"Prawn malai curry\",\r\n                \"price\": 1118\r\n            },\r\n            {\r\n                \"foodName\": \"Red Rice\",\r\n                \"price\": 930\r\n            },\r\n            {\r\n                \"foodName\": \"Shukto\",\r\n                \"price\": 1387\r\n            },\r\n            {\r\n                \"foodName\": \"Til Pitha\",\r\n                \"price\": 1319\r\n            },\r\n            {\r\n                \"foodName\": \"Bebinca\",\r\n                \"price\": 1179\r\n            },\r\n            {\r\n                \"foodName\": \"Shufta\",\r\n                \"price\": 825\r\n            },\r\n            {\r\n                \"foodName\": \"Mawa Bati\",\r\n                \"price\": 254\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/PublishMenu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"PublishMenu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestaurantRating_1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantId\": 0,\r\n    \"restaurantRating\": 3\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/RestaurantRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"RestaurantRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FoodRating_1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantId\": 0,\r\n    \"FoodRating\": 4,\r\n    \"foodId\": 4\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/RestaurantRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"RestaurantRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestaurantRating_2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantId\": 1,\r\n    \"restaurantRating\": 5\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/RestaurantRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"RestaurantRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FoodRating_2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantId\": 1,\r\n    \"FoodRating\": 5,\r\n    \"foodId\": 73\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:55255/api/RestaurantRating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"RestaurantRating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchRestaurants",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:55255/api/Search?lat=18.519039&long=73.868893&sort=resto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55255",
+					"path": [
+						"api",
+						"Search"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "18.519039"
+						},
+						{
+							"key": "long",
+							"value": "73.868893"
+						},
+						{
+							"key": "sort",
+							"value": "resto"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
