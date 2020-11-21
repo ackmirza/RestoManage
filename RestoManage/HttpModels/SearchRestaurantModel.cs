@@ -22,7 +22,7 @@ namespace RestoManage.HttpModels
 
         public bool IsNameExist => Name != null;
 
-        public bool IsFoodExist => Food != null;
+        public bool IsMenuItemExist => Food != null;
 
         public bool IsAddressExist => Address != null;
 

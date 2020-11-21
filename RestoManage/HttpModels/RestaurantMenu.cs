@@ -2,6 +2,9 @@
 
 namespace RestoManage.HttpModels
 {
+    /// <summary>
+    /// Restaurant Menu
+    /// </summary>
     public class RestaurantMenu
     {
         public int RestaurantId { get; set; }
@@ -13,16 +16,16 @@ namespace RestoManage.HttpModels
             set 
             { 
                 _menu = value;
-                UpdateFoods();
+                GenerateMenuItemIds();
             }
         }
 
-        private void UpdateFoods()
+        private void GenerateMenuItemIds()
         {
-            if(_menu != null && _menu.Foods != null)
+            if(_menu != null && _menu.MenuItems != null)
             {
                 int i = 0;
-                _menu.Foods.ForEach(x =>
+                _menu.MenuItems.ForEach(x =>
                 {
                     x.Id = i+1;
                     i++;

@@ -5,6 +5,10 @@ using System.Collections.Generic;
 
 namespace RestoManage.Repositories
 {
+    /// <summary>
+    /// Implemented Repository pattern to build data flow pipeline 
+    /// between data and controller. It helps to segregate functionaly according to data
+    /// </summary>
     public class RestaurantRepository
     {
         public bool AddRestaurant(Restaurant resto)
@@ -12,20 +16,20 @@ namespace RestoManage.Repositories
             return DBManager.AddRestaurant(resto);
         }
 
-        public bool AddOrUpdateMenu(RestaurantMenu menu)
+        public bool UpdateMenu(RestaurantMenu menu)
         {
             return DBManager.AddOrUpdateRestaurantMenu(menu);
         }
 
-        internal bool UpdateRestaurantOrFoodRating(RatingModel rating)
+        internal bool UpdateRestaurantOrMenuItemRating(RatingModel rating)
         {
-            if(rating.RestaurantRating != null && rating.FoodRating== null)
+            if(rating.RestaurantRating != null && rating.MenuItemRating== null)
             {
                 return DBManager.UpdateRestaurantRating(rating.RestaurantId, rating.RestaurantRating);
             }
-            else if(rating.FoodRating != null && rating.RestaurantRating == null)
+            else if(rating.MenuItemRating != null && rating.RestaurantRating == null)
             {
-                return DBManager.UpdateFoodRating(rating.RestaurantId, rating.FoodId, rating.FoodRating);
+                return DBManager.UpdateMenuItemRating(rating.RestaurantId, rating.MenuItemId, rating.MenuItemRating);
             }
 
             return false;

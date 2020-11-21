@@ -2,11 +2,14 @@
 
 namespace RestoManage.Models
 {
+    /// <summary>
+    /// Restaurant model class
+    /// </summary>
     public class Restaurant
     {
         Restaurant()
         {
-            UserRating = new List<int>();
+            UserRestaurantRating = new List<int>();
         }
 
         public int Id { get; set; }
@@ -19,9 +22,9 @@ namespace RestoManage.Models
 
         public double Long { get; set; }
 
-        public float Rating { get; set; }
+        public float RestaurantRating { get; set; }
 
-        public List<int> UserRating { get; set; }
+        public List<int> UserRestaurantRating { get; set; }
 
         public List<ContactNumber> ContactNos { get; set; }
 

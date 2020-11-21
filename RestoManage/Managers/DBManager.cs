@@ -8,6 +8,11 @@ using System.Linq;
 
 namespace RestoManage.Managers
 {
+    /// <summary>
+    /// I used Flat file instead of Database, we can replace this with Database
+    /// 
+    /// Flat File Communication and Read/Write operation to store data
+    /// </summary>
     public class DBManager
     {
         static DataStore restaurantObj = new DataStore("data.json");
@@ -52,8 +57,8 @@ namespace RestoManage.Managers
             var restaurant = GetRestaurantById(restaurantId);
             if (restaurant != null)
             {
-                restaurant.UserRating.Add((int)restaurantRating);
-                restaurant.Rating = (float)restaurant.UserRating.Average();
+                restaurant.UserRestaurantRating.Add((int)restaurantRating);
+                restaurant.RestaurantRating = (float)restaurant.UserRestaurantRating.Average();
 
                 return restaurantCollection.UpdateOne(restaurantId, restaurant);
             }
@@ -61,17 +66,17 @@ namespace RestoManage.Managers
             return false;
         }
 
-        internal static bool UpdateFoodRating(int restaurantId, int foodId, int? foodRating)
+        internal static bool UpdateMenuItemRating(int restaurantId, int foodId, int? foodRating)
         {
             bool result = false;
             var restaurant = GetRestaurantById(restaurantId);
-            if (restaurant != null && restaurant.Menu != null && restaurant.Menu.Foods.Count > 0)
+            if (restaurant != null && restaurant.Menu != null && restaurant.Menu.MenuItems.Count > 0)
             {
-                var food = restaurant.Menu.Foods.FirstOrDefault(x => x.Id == foodId);
+                var food = restaurant.Menu.MenuItems.FirstOrDefault(x => x.Id == foodId);
                 if (food != null)
                 {
-                    food.UserRating.Add((int)foodRating);
-                    food.Rating = (float)food.UserRating.Average();
+                    food.UserFoodRating.Add((int)foodRating);
+                    food.FoodRating = (float)food.UserFoodRating.Average();
 
                     result = restaurantCollection.UpdateOne(restaurantId, restaurant);
                 }
@@ -96,9 +101,9 @@ namespace RestoManage.Managers
             {
                 query = query.Where(x => x.Address.Contains(searchFilter.Address));
             }
-            if (searchFilter.IsFoodExist)
+            if (searchFilter.IsMenuItemExist)
             {
-                query = query.Where(x => x.Menu.Foods.Any(y => y.FoodName.Contains(searchFilter.Food)));
+                query = query.Where(x => x.Menu.MenuItems.Any(y => y.FoodName.Contains(searchFilter.Food)));
             }
             if (searchFilter.IsSortApplied)
             {
@@ -106,11 +111,11 @@ namespace RestoManage.Managers
                 {
                     switch (filter)
                     {
-                        case Sort.FoodRating:
-                            query = query.OrderBy(x => x.Menu.Foods.Average(y => y.Rating));
+                        case Sort.MenuItemRating:
+                            query = query.OrderBy(x => x.Menu.MenuItems.Average(y => y.FoodRating));
                             break;
                         case Sort.RestaurantRating:
-                            query = query.OrderByDescending(x => x.Rating);
+                            query = query.OrderByDescending(x => x.RestaurantRating);
                             break;
                         default:
                             break;

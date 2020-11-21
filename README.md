@@ -20,3 +20,16 @@ This is web API solution for Restaurants, it is implemented under Dot Net Core o
 
 1. Using Postman we can test this solution.
 1. 'RestoManage.postman_collection.json' open this file in Postman to test the solution.
+
+## Security
+
+1. Open API, No user model integrated
+2. Anyone can place restaurant in any geolocation (Region wise validation not applied)
+3. It is public rating because there is no User login
+
+
+## Known Detail
+
+1. Response Model have not implemented (Success Model, Fault Model), but It is implementable
+2. Exception Handling taken care by parent level, I suppose to write different wrapper to handle generic exception.
+3. 
